@@ -18,6 +18,9 @@ v5.1.39
 ### web3 version number
 ^0.20.7
 
+### Ganache
+Project is configured to connect to Ganache at HTTP://127.0.0.1:7545.
+
 ### Activity Diagram
 ![activity_diagram](images/activity_diagram.jpeg)
 
