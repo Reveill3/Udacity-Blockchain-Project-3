@@ -291,8 +291,6 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
     emit Purchased(_upc);
   }
 
-  function addToHistory(uint _upc, string hash)
-
   // Define a function 'fetchItemBufferOne' that fetches the data
   function fetchItemBufferOne(uint _upc) public view returns 
   (
