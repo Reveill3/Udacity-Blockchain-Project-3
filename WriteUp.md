@@ -17,4 +17,4 @@ v5.1.39
 ^0.20.7
 
 ### Activity Diagram
-[activity_digram](images/activity_diagram.jpeg)
+![activity_diagram](images/activity_diagram.jpeg)
