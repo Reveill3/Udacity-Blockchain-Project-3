@@ -28,7 +28,7 @@ Project is configured to connect to Ganache at HTTP://127.0.0.1:7545.
 ![class_diagram](images/class_diagram.jpg)
 
 ### Sequence Diagram
-![sequence_diagram](images/sequence_diagram.jpeg)
+![sequence_diagram](images/sequence-diagram.jpeg)
 
 ### State Diagram
 ![state_diagram](images/state_diagram.jpeg)
