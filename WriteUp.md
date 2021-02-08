@@ -25,13 +25,13 @@ Project is configured to connect to Ganache at HTTP://127.0.0.1:7545.
 ![activity_diagram](images/activity_diagram.jpeg)
 
 ### Class Diagram
-![activity_diagram](images/class_diagram.jpeg)
+![class_diagram](images/class_diagram.jpg)
 
 ### Sequence Diagram
-![activity_diagram](images/sequence_diagram.jpeg)
+![sequence_diagram](images/sequence_diagram.jpg)
 
 ### State Diagram
-![activity_diagram](images/state_diagram.jpeg)
+![state_diagram](images/state_diagram.jpg)
 
 ### Libraries
 Roles.sol
