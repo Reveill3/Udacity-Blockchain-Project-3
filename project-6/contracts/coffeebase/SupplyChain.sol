@@ -19,10 +19,6 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
 
   // Define a public mapping 'items' that maps the UPC to an Item.
   mapping (uint => Item) items;
-
-  // Define a public mapping 'itemsHistory' that maps the UPC to an array of TxHash, 
-  // that track its journey through the supply chain -- to be sent from DApp.
-  mapping (uint => string[]) itemsHistory;
   
   // Define enum 'State' with the following values:
   enum State 
@@ -294,6 +290,8 @@ contract SupplyChain is FarmerRole, DistributorRole, RetailerRole, ConsumerRole 
     // Emit the appropriate event
     emit Purchased(_upc);
   }
+
+  function addToHistory(uint _upc, string hash)
 
   // Define a function 'fetchItemBufferOne' that fetches the data
   function fetchItemBufferOne(uint _upc) public view returns 

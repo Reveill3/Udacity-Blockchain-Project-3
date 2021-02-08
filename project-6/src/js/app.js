@@ -4,18 +4,18 @@ App = {
     emptyAddress: "0x0000000000000000000000000000000000000000",
     sku: 0,
     upc: 0,
-    metamaskAccountID: "0x0000000000000000000000000000000000000000",
-    ownerID: "0x0000000000000000000000000000000000000000",
-    originFarmerID: "0x0000000000000000000000000000000000000000",
+    metamaskAccountID: "0xb0D27820dcFB9EeDf69101774D809EEF2E2C1cD7",
+    ownerID: "0xb0D27820dcFB9EeDf69101774D809EEF2E2C1cD7",
+    originFarmerID: "0xb0D27820dcFB9EeDf69101774D809EEF2E2C1cD7",
     originFarmName: null,
     originFarmInformation: null,
     originFarmLatitude: null,
     originFarmLongitude: null,
     productNotes: null,
     productPrice: 0,
-    distributorID: "0x0000000000000000000000000000000000000000",
-    retailerID: "0x0000000000000000000000000000000000000000",
-    consumerID: "0x0000000000000000000000000000000000000000",
+    distributorID: "0xb0D27820dcFB9EeDf69101774D809EEF2E2C1cD7",
+    retailerID: "0xb0D27820dcFB9EeDf69101774D809EEF2E2C1cD7",
+    consumerID: "0xb0D27820dcFB9EeDf69101774D809EEF2E2C1cD7",
 
     init: async function () {
         App.readForm();
@@ -99,7 +99,7 @@ App = {
 
     initSupplyChain: function () {
         /// Source the truffle compiled smart contracts
-        var jsonSupplyChain='../../build/contracts/SupplyChain.json';
+        var jsonSupplyChain='../build/contracts/SupplyChain.json';
         
         /// JSONfy the smart contracts
         $.getJSON(jsonSupplyChain, function(data) {
@@ -166,7 +166,6 @@ App = {
     harvestItem: function(event) {
         event.preventDefault();
         var processId = parseInt($(event.target).data('id'));
-
         App.contracts.SupplyChain.deployed().then(function(instance) {
             return instance.harvestItem(
                 App.upc, 
@@ -175,13 +174,14 @@ App = {
                 App.originFarmInformation, 
                 App.originFarmLatitude, 
                 App.originFarmLongitude, 
-                App.productNotes
+                App.productNotes,
+                {from: App.metamaskAccountID}
             );
         }).then(function(result) {
             $("#ftc-item").text(result);
             console.log('harvestItem',result);
         }).catch(function(err) {
-            console.log(err.message);
+            console.log(err);
         });
     },
 
